@@ -29,10 +29,10 @@ console.log(student.grades["math"]);
 
 //4
 setting = {
-    volumn: 50,
+    volume: 50,
     brightness: 70
 }
-setting.volumn = 100;
+setting.volume = 100;
 console.log("New setting:", setting);
 
 //5

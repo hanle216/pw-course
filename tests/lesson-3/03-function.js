@@ -51,7 +51,7 @@ console.log(getTopStudents());
 
 //4. Viết hàm calculateInterest
 function calculateInterest(principal, rate, years) {
-    total = principal + principal * rate * years / 100
+   const total = principal + principal * rate * years / 100
     return total;
 }
 console.log(`Tổng số tiền: ${calculateInterest(50000000, 7, 3).toLocaleString()} VND`);
