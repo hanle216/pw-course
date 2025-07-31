@@ -6,7 +6,7 @@ const newScores = scores.map((score) => {
     if (score < 90) {
         return score + score * 0.1;
     } else {
-        return score - score * 0.5;
+        return score - score * 0.05;
     }
 })
 console.log(newScores);

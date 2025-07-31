@@ -11,5 +11,5 @@ const checkAges = scores.some((age) => age > 18);
 console.log(checkAges);
 
 //5.3
-const checkWords = words.every((word) => word.length > 5);
+const checkWords = words.some((word) => word.length > 5);
 console.log(checkWords);
