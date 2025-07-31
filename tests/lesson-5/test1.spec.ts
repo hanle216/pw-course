@@ -18,21 +18,21 @@ test("Test 01: Fill the information", async ({ page }) => {
     await page
       .locator("//textarea[@id='bio']")
       .pressSequentially("Hello Playwright Typescript!");
-    await page.evaluate(() => {
-      const slider = document.getElementById("rating") as HTMLInputElement;
-      slider.value = "10";
-      slider.dispatchEvent(new Event("input"));
-      slider.dispatchEvent(new Event("change"));
-    });
-    await page.locator("//input[@id='favcolor']").click();
-    await page.evaluate(() => {
-      const colorInput = document.getElementById(
-        "favcolor"
-      ) as HTMLInputElement;
-      colorInput.value = "#7e83c9";
-      colorInput.dispatchEvent(new Event("input"));
-      colorInput.dispatchEvent(new Event("change"));
-    });
+    // await page.evaluate(() => {
+    //   const slider = document.getElementById("rating") as HTMLInputElement;
+    //   slider.value = "10";
+    //   slider.dispatchEvent(new Event("input"));
+    //   slider.dispatchEvent(new Event("change"));
+    // });
+    // await page.locator("//input[@id='favcolor']").click();
+    // await page.evaluate(() => {
+    //   const colorInput = document.getElementById(
+    //     "favcolor"
+    //   ) as HTMLInputElement;
+    //   colorInput.value = "#7e83c9";
+    //   colorInput.dispatchEvent(new Event("input"));
+    //   colorInput.dispatchEvent(new Event("change"));
+    // });
     await page.locator("//div[contains(text(), 'Hover over me')]").hover();
     await page.locator("//input[@id='newsletter']").check();
     //  await page.locator("//input[@id='toggleOption']").check();
