@@ -1,9 +1,13 @@
 import { test } from "@playwright/test";
-test("Test 02: Add products to cart", async ({ page }) => {
-  await test.step("Click on Bài học 2: Product Page", async () => {
+test("Test 02: Product page", async ({ page }) => {
+  await test.step("Navigate to material Playwright page", async () => {
     await page.goto("https://material.playwrightvn.com/");
+  });
+
+  await test.step("Click on Product page", async () => {
     await page.locator("//a[@href='02-xpath-product-page.html']").click();
   });
+
   await test.step("Add products to cart", async () => {
     // for (let i = 0; i < 2; i++) {
     //   await page.locator("//button[@data-product-id='1']").click();

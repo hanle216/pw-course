@@ -2,15 +2,18 @@
 const departurePlanet = "Trái Đất";
 const mission = "Khám phá Vũ trụ K16";
 let crew = ["Hân", "Anh", "Ngân", "Nga", "Tú"];
-const launchShip = () => {
-    let crewList = "";
-    for (let i = 0; i < crew.length; i++) {
-        crewList += crew[i];
-        crewList += ", "
-    }
-    return `Chuẩn bị khởi động! Phi hành đoàn gồm: ${crewList}sẽ đồng hành cùng bạn trong chuyến phiêu lưu ${mission}!`
-};
-console.log(launchShip());
+// const launchShip = () => {
+//     let crewList = "";
+//     for (let i = 0; i < crew.length; i++) {
+//         crewList += crew[i];
+//       crewList += ", "
+//     }
+//     return `Chuẩn bị khởi động! Phi hành đoàn gồm: ${crewList}sẽ đồng hành cùng bạn trong chuyến phiêu lưu ${mission}!`
+// };
+launchShip = (crew) => {
+    return `Chuẩn bị khởi động! Phi hành đoàn gồm: ${crew.join(', ')} sẽ đồng hành cùng bạn trong chuyến phiêu lưu ${mission}!`
+}
+console.log(launchShip(crew));
 
 //2
 const calculateDistance = (speed, time) => {
@@ -25,21 +28,33 @@ const convertTimeToHex = (time) => {
 console.log(convertTimeToHex(120));
 
 //4
-const decryptCode = (code) => {
-    let codeStr = "";
-    for (let i = 0; i < code.length; i++) {
-        let result = code[i];
-        if (result === result.toLowerCase() && result !== result.toUpperCase()) {
-            codeStr += result.toUpperCase();
-        } else if (result === result.toUpperCase() && result !== result.toLowerCase()) {
-            codeStr += result.toLowerCase();
+const decryptCode = (input) => {
+    let result = "";
+    for (char of input) {
+        if (char === char.toLowerCase()) {
+            result += char.toUpperCase();
         } else {
-            codeStr += result;
+            result += char.toLowerCase();
         }
     }
-    return codeStr;
+    return result;
 }
 console.log(decryptCode("K16 Challenge"));
+// const decryptCode = (code) => {
+//     let codeStr = "";
+//     for (let i = 0; i < code.length; i++) {
+//         let result = code[i];
+//         if (result === result.toLowerCase() && result !== result.toUpperCase()) {
+//             codeStr += result.toUpperCase();
+//         } else if (result === result.toUpperCase() && result !== result.toLowerCase()) {
+//             codeStr += result.toLowerCase();
+//         } else {
+//             codeStr += result;
+//         }
+//     }
+//     return codeStr;
+// }
+//console.log(decryptCode("K16 Challenge"));
 
 //5
 returnToEarth = () => {
